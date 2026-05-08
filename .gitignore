@@ -1,8 +1,22 @@
-.venv/
+# Python
 __pycache__/
-*.pyc
-.ipynb_checkpoints/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+
+# Entorno de pruebas
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Archivos Generados
+historial_fallas.csv
+*.log
+
+# IDEs
 .vscode/
 .idea/
-*.png
-*.csv
+*.swp
+.ipynb_checkpoints/
