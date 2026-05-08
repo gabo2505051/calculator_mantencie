@@ -60,15 +60,16 @@ La función `generar_recomendaciones(row)` evalúa los KPIs con umbrales definid
 6.  ✅ **Type Hints:** Anotaciones de tipo en todos los métodos de `ReliabilityEngine`.
 7.  ✅ **Tests Unitarios:** 21 tests en `tests/test_reliability.py` — 100% passing. Cubre: fórmulas, recomendaciones, tendencias y visualización.
 8.  ✅ **Logging Profesional:** Todos los `print()` reemplazados por `logging` con timestamps.
+9.  ✅ **Interfaz Interactiva:** Dashboard en Streamlit (`app.py`) con sliders para ajuste de umbrales en tiempo real y visualización dinámica.
 
 ### 💡 Mejoras Adicionales Implementadas
 *   **Dashboard de 4 paneles** (MTBF vs MTTR, Disponibilidad, MTTF, Curva de la Bañera).
 *   **5 condiciones de recomendación** (Crítico, Alerta, Mejora, Degradación, Óptimo).
 *   **Validación de columnas** al cargar datos con errores descriptivos.
 *   **Properties** para acceso seguro a datos y KPIs.
+*   **Estilos Custom (Glassmorphism):** Interfaz optimizada para Dark Mode.
 
 ### 💼 Enfoque de Servicio (Futuro)
-*   **Dashboard de Entrega:** Integrar en Streamlit reutilizando la lógica de `dash_data`.
 *   **Reporte Automatizado:** Generar PDF con recomendaciones usando la lógica de `Auto_report`.
 
-**Estado:** ⭐⭐⭐⭐⭐ Mejoras completadas — 21/21 tests passing.
+**Estado:** ⭐⭐⭐⭐⭐ Proyecto finalizado y publicado — 21/21 tests passing.
