@@ -1,105 +1,107 @@
-# Calculadora de Confiabilidad Industrial (IIoT Reliability Calc) - v2.0
+# Industrial Reliability Calculator (IIoT Reliability Calc) - v2.0
 
-![Status](https://img.shields.io/badge/Status-v2.0_Profesional-success)
+![Status](https://img.shields.io/badge/Status-v2.0_Professional-success)
 ![Python](https://img.shields.io/badge/Python-3.11+-blue?logo=python)
 ![Pandas](https://img.shields.io/badge/Pandas-Data_Analysis-150458?logo=pandas)
 ![Tests](https://img.shields.io/badge/Tests-22_Passing-brightgreen)
 
-Este proyecto forma parte de mi **Portafolio IIoT** y consiste en una herramienta avanzada de Ingeniería de Confiabilidad diseñada para optimizar la toma de decisiones en entornos industriales. La aplicación automatiza el cálculo de indicadores clave (KPIs) y proporciona recomendaciones estratégicas basadas en el comportamiento histórico de los activos.
+> 🌐 **Language / Idioma:** You are reading the English version. | [Leer en Español → READMEES.md](READMEES.md)
 
-## 📌 Problemática
+This project is part of my **IIoT Portfolio** and consists of an advanced Reliability Engineering tool designed to optimize decision-making in industrial environments. The application automates the calculation of key performance indicators (KPIs) and provides strategic recommendations based on the historical behavior of assets.
 
-En muchas plantas industriales, la gestión del mantenimiento sigue siendo reactiva debido a:
-- **Falta de visibilidad:** Los datos de fallas suelen estar dispersos en hojas de cálculo no estructuradas o bitácoras manuales.
-- **Subjetividad:** La toma de decisiones depende de la intuición del personal en lugar de métricas de ingeniería precisas.
-- **"Malos Actores":** Dificultad para identificar rápidamente qué equipos consumen más recursos o fallan con mayor frecuencia.
-- **Costos Ocultos:** Tiempo de inactividad (downtime) prolongado por falta de análisis de mantenibilidad (MTTR).
+## 📌 Problem Statement
 
-## 💡 Solución
+In many industrial plants, maintenance management remains reactive due to:
+- **Lack of visibility:** Failure data is often scattered across unstructured spreadsheets or manual logs.
+- **Subjectivity:** Decision-making relies on staff intuition rather than precise engineering metrics.
+- **"Bad Actors":** Difficulty in quickly identifying which equipment consumes the most resources or fails most frequently.
+- **Hidden Costs:** Extended downtime due to lack of maintainability analysis (MTTR).
 
-Esta calculadora resuelve estos desafíos mediante:
-1. **Normalización de Datos:** Transforma registros históricos en una estructura de datos limpia y lista para análisis.
-2. **KPIs de Clase Mundial:** Calcula de forma automática el **MTBF** (Confiabilidad), **MTTR** (Mantenibilidad) y **MTTF** (Tiempo Hasta Primera Falla).
-3. **Análisis de Disponibilidad:** Identifica la disponibilidad porcentual de cada activo comparándolo contra objetivos corporativos.
-4. **Inteligencia de Mantenimiento:** Un motor de reglas traduce los KPIs en recomendaciones técnicas concretas, permitiendo pasar de un mantenimiento correctivo a uno preventivo y predictivo.
+## 💡 Solution
 
-## 🚀 Novedades de la Versión 2.0 (Mejoras 5 Estrellas)
+This calculator addresses these challenges through:
+1. **Data Normalization:** Transforms historical records into a clean data structure ready for analysis.
+2. **World-Class KPIs:** Automatically calculates **MTBF** (Reliability), **MTTR** (Maintainability), and **MTTF** (Mean Time To First Failure).
+3. **Availability Analysis:** Identifies the percentage availability of each asset compared to corporate targets.
+4. **Maintenance Intelligence:** A rules engine translates KPIs into concrete technical recommendations, enabling a shift from corrective to preventive and predictive maintenance.
 
-- **Clase `ReliabilityEngine`:** Arquitectura orientada a objetos lista para integración con agentes IA (MantOS).
-- **MTTF Implementado:** Cálculo de Tiempo Medio Hasta Primera Falla para activos no reparables.
-- **Detección de Tendencias:** Condición D real — identifica automáticamente incrementos sostenidos en la tasa de fallas (indicador de desgaste).
-- **Umbrales Configurables:** Clase `UmbralesConfiabilidad` con `dataclass` para adaptar criterios sin modificar código.
-- **Logging Profesional:** Sistema de registro con timestamps reemplazando todos los `print()`.
-- **Type Hints:** Anotaciones de tipo en todas las funciones y métodos.
-- **Suite de Pruebas:** 22 tests unitarios con `pytest` validando fórmulas, recomendaciones y visualización.
-- **Output Organizado:** Gráficos en carpeta `reports/` en lugar de la raíz del proyecto.
+## 🚀 What's New in Version 2.0 (5-Star Improvements)
 
-## 🛠️ Características Principales
+- **`ReliabilityEngine` Class:** Object-oriented architecture ready for AI agent integration (MantOS).
+- **MTTF Implemented:** Calculation of Mean Time To First Failure for non-repairable assets.
+- **Trend Detection:** Real Condition D — automatically identifies sustained increases in failure rate (wear indicator).
+- **Configurable Thresholds:** `ReliabilityThresholds` class with `dataclass` to adapt criteria without modifying code.
+- **Professional Logging:** Timestamp-based logging system replacing all `print()`.
+- **Type Hints:** Type annotations on all functions and methods.
+- **Test Suite:** 22 unit tests with `pytest` validating formulas, recommendations, and visualization.
+- **Organized Output:** Charts saved in the `reports/` folder instead of the project root.
 
-- **Cálculo Automatizado de KPIs:** Obtención precisa de MTBF, MTTR, MTTF y Disponibilidad Operacional.
-- **Motor de Recomendaciones:** Sistema experto con 5 condiciones (Crítico, Alerta, Mejora, Degradación, Óptimo).
-- **Generador de Datos Sintéticos:** Capacidad para simular escenarios industriales complejos (mortalidad infantil, desgaste, activos críticos).
-- **Dashboard Visual:** 4 paneles incluyendo MTBF vs MTTR, Disponibilidad, MTTF y la **Curva de la Bañera**.
+## 🛠️ Key Features
 
-## 🛠️ Tecnologías Utilizadas
+- **Automated KPI Calculation:** Precise computation of MTBF, MTTR, MTTF, and Operational Availability.
+- **Recommendations Engine:** Expert system with 5 conditions (Critical, Alert, Improvement, Degradation, Optimal).
+- **Synthetic Data Generator:** Ability to simulate complex industrial scenarios (infant mortality, wear, critical assets).
+- **Visual Dashboard:** 4 panels including MTBF vs MTTR, Availability, MTTF, and the **Bathtub Curve**.
+
+## 🛠️ Technologies Used
 
 - **Python 3.11+**
-- **Pandas:** Procesamiento de series temporales y limpieza de datos.
-- **Matplotlib:** Generación de dashboards y visualizaciones técnicas.
-- **Numpy:** Cálculos estadísticos y simulaciones de curvas de falla.
-- **Pytest:** Automatización de pruebas unitarias.
+- **Pandas:** Time series processing and data cleaning.
+- **Matplotlib:** Dashboard generation and technical visualizations.
+- **Numpy:** Statistical calculations and failure curve simulations.
+- **Pytest:** Unit test automation.
 
-## 📁 Estructura del Proyecto
+## 📁 Project Structure
 
 ```text
 cal_mant/
-├── reliability_calculator.py  # Motor principal (Clase ReliabilityEngine)
-├── generate_dataset.py        # Generador de datos industriales sintéticos
-├── tests/                     # Suite de pruebas unitarias
-│   └── test_reliability.py    # 22 tests automatizados
-├── reports/                   # Dashboard generado (creado automáticamente)
-├── requirements.txt           # Dependencias del proyecto
-├── PROYECTO_2_PLAN.md         # Documentación del plan de desarrollo
+├── reliability_calculator.py  # Main engine (ReliabilityEngine class)
+├── generate_dataset.py        # Synthetic industrial data generator
+├── tests/                     # Unit test suite
+│   └── test_reliability.py    # 22 automated tests
+├── reports/                   # Generated dashboard (created automatically)
+├── requirements.txt           # Project dependencies
+├── PROYECTO_2_PLAN.md         # Development plan documentation
 └── README.md
 ```
 
-## ⚙️ Instalación y Uso
+## ⚙️ Installation & Usage
 
-1. **Clonar el repositorio:**
+1. **Clone the repository:**
    ```bash
-   git clone https://github.com/tu-usuario/iiot-reliability-calc.git
+   git clone https://github.com/your-username/iiot-reliability-calc.git
    cd iiot-reliability-calc
    ```
 
-2. **Instalar dependencias:**
+2. **Install dependencies:**
    ```bash
    pip install -r requirements.txt
    ```
 
-3. **Generar el dataset de prueba (Opcional):**
+3. **Generate the test dataset (Optional):**
    ```bash
    python generate_dataset.py
    ```
 
-4. **Ejecutar la calculadora:**
+4. **Run the calculator:**
    ```bash
    python reliability_calculator.py
    ```
 
-## 🧪 Pruebas Unitarias
+## 🧪 Unit Tests
 
-Para verificar la integridad de las fórmulas y el motor de recomendaciones:
+To verify the integrity of formulas and the recommendations engine:
 ```bash
 pytest tests/ -v
 ```
 
-## 📊 Visualización de Resultados
+## 📊 Results Visualization
 
-El script genera automáticamente un dashboard en `reports/analisis_confiabilidad_completo.png` que incluye:
-1. Comparativa de Confiabilidad (MTBF) vs Mantenibilidad (MTTR).
-2. Nivel de Disponibilidad por equipo con alertas de color.
-3. MTTF: Tiempo Hasta Primera Falla por equipo.
-4. Representación de la Curva de la Bañera para identificar etapas del ciclo de vida.
+The script automatically generates a dashboard at `reports/analisis_confiabilidad_completo.png` that includes:
+1. Reliability (MTBF) vs Maintainability (MTTR) comparison.
+2. Availability level per equipment with color-coded alerts.
+3. MTTF: Mean Time To First Failure per equipment.
+4. Bathtub Curve representation to identify lifecycle stages.
 
 ---
-**Autor:** Gabriel Castro - Especialista en Automatización e IIoT.
+**Author:** Gabriel Castro - Automation & IIoT Specialist.
